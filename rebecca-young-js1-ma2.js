@@ -42,6 +42,16 @@ mouseoutBtn.addEventListener("mouseout", () => {
 });
 
 //Question 6: Select all the li tags from the HTML below. Using a loop, add a mouseover event listener to each tag. The callback function should log the value of the data attribute on each element when the cursor moves over it.
+const hoverListHandler = () => {
+	const hoverListItems = document.querySelectorAll("li");
+	hoverListItems.forEach(element => {
+		element.addEventListener("mouseover", () => {
+			console.log(element.dataset.animal);
+		});
+	});
+};
+
+hoverListHandler();
 
 //question 7:
 var animal = "cow";
@@ -64,8 +74,8 @@ switch (animal) {
 
 //Question 8
 const sheep = ["Malcolm", "Anders", "Marie"];
-sheep.forEach(event => {
-	console.log(event);
+sheep.forEach(element => {
+	console.log(element);
 });
 
 //Question 9 Create a timer that logs the word hello every half a second. It must stop after its logged the word 6 times.
@@ -88,6 +98,3 @@ const changeContents = () => {
 	}, 2000);
 };
 changeContents();
-
-//TODO
-// question 6
